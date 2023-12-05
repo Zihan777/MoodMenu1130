@@ -1,6 +1,6 @@
 body {
     display: flex;
-    flex-direction: column; /* 使元素垂直排列 */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -10,11 +10,11 @@ body {
 .image-container {
     display: flex;
     gap: 10px;
-    margin-top: 40px; /* 将图片下移一点，确保文本不被覆盖 */
+    margin-top: 40px;
 }
 
 .image-container img {
-    width: 150px; /* 根据需要调整图片大小 */
+    width: 150px; 
     transition: transform 0.3s ease;
 }
 
@@ -24,33 +24,33 @@ body {
 
 /* 通用按钮样式 */
 .button {
-    background-color: rgb(112, 255, 195); /* 按钮背景色 */
-    color: rgb(255, 255, 255); /* 按钮文本色 */
-    padding: 10px 40px; /* 按钮内边距 */
-    border-radius: 15px; /* 边框圆角 */
-    border: none; /* 无边框 */
-    font-size: 2em; /* 文本大小 */
-    cursor: pointer; /* 鼠标样式 */
-    text-decoration: none; /* 移除超链接的下划线 */
-    display: inline-block; /* 对齐按钮和链接 */
-    margin-right: 20px; /* 按钮之间的间隔 */
+    background-color: rgb(112, 255, 195); 
+    color: rgb(255, 255, 255);
+    padding: 10px 40px; 
+    border-radius: 15px;
+    border: none; 
+    font-size: 2em; 
+    cursor: pointer;
+    text-decoration: none; 
+    display: inline-block; 
+    margin-right: 20px; 
 }
 
 .header-buttons {
     position: absolute;
-    top: 20px; /* 调整以适应页面布局 */
-    right: 30px; /* 调整以适应页面布局 */
+    top: 20px; 
+    right: 30px; 
     z-index: 10;
 }
 
 .back-button {
     position: absolute;
     top: 20px;
-    left: 30px; /* 放置在左上角 */
+    left: 30px; 
     z-index: 10;
 }
 
-/* 可以添加媒体查询来调整小屏幕的样式 */
+
 @media (max-width: 600px) {
     .image-container img {
         width: 50px;
@@ -63,7 +63,7 @@ body {
     }
 
     .header-buttons button, .back-button a {
-        margin-right: 10px; /* 小屏幕上的按钮间隔 */
+        margin-right: 10px; 
     }
 }
 
@@ -79,48 +79,47 @@ body {
 }
 
 .fixed-bottom-button {
-    position: fixed; /* 固定位置 */
-    bottom: 150px; /* 距离屏幕底部20px */
-    left: 50%; /* 水平居中 */
-    transform: translateX(-50%); /* 精确居中调整 */
-    z-index: 1000; /* 确保在最上层 */
+    position: fixed;
+    bottom: 150px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 1000;
 }
 
-/* p3的滑动*/
 
 .content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 10px; /* 添加一些内边距 */
+    padding: 10px; 
 }
 
 .image-slider-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 60%; /* 页面宽度的40% */
-    margin-top: 80px; /* 在顶部增加更多空间 */
-    margin-bottom: 15px; /* 底部的间距保持不变 */
+    width: 60%; 
+    margin-top: 80px; 
+    margin-bottom: 15px; 
 }
 
 .image-slider-container img {
-    width: 15%; /* 进一步减小图片宽度 */
+    width: 15%; 
     height: auto;
 }
 
 .image-slider-container input[type=range] {
-    width: 10%; /* 进一步减小滑动条宽度 */
+    width: 10%; 
 }
 
 
 .floating-image {
     position: absolute;
-    width: 10%; /* 减小图片的宽度百分比 */
+    width: 10%; 
     z-index: 2;
     animation: float 3s ease-in-out infinite;
-    bottom: 20%; /* 根据需要调整位置 */
+    bottom: 20%; 
     left: 50%;
     transform: translateX(-50%);
 }
