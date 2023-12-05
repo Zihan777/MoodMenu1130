@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 3</title>
+    <link rel="stylesheet" href="p2.css?v=1">
+    <style>
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .image-slider-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 40%;
+            margin: 15px 0;
+        }
+
+        .image-slider-container img {
+            width: 20%;
+            height: auto;
+        }
+
+        .image-slider-container input[type=range] {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-buttons">
+        <a href="index.html" class="button">Home</a>
+        <a href="about.html" class="button">About</a> 
+    </div>
+
+    <div class="content-container">
+        <div class="image-slider-container">
+            <img src="a.png" alt="Angry">
+            <input type="range" id="angry-slider" min="1" max="10" value="5">
+        </div>
+        <div class="image-slider-container">
+            <img src="s.png" alt="Sad">
+            <input type="range" id="sad-slider" min="1" max="10" value="5">
+        </div>
+        <div class="image-slider-container">
+            <img src="h.png" alt="Happy">
+            <input type="range" id="happy-slider" min="1" max="10" value="5">
+        </div>
+        <div class="image-slider-container">
+            <img src="c.png" alt="Calm">
+            <input type="range" id="calm-slider" min="1" max="10" value="5">
+        </div>
+        <div class="image-slider-container">
+            <img src="e.png" alt="Excited">
+            <input type="range" id="excited-slider" min="1" max="10" value="5">
+        </div>
+    </div>
+
+    <div class="fixed-bottom-button">
+        <button onclick="processData()" class="button">OK</button>
+    </div>
+
+    <script>
+      function processData() {
+    var angryValue = parseInt(document.getElementById("angry-slider").value);
+    var sadValue = parseInt(document.getElementById("sad-slider").value);
+    var happyValue = parseInt(document.getElementById("happy-slider").value);
+    var calmValue = parseInt(document.getElementById("calm-slider").value);
+    var excitedValue = parseInt(document.getElementById("excited-slider").value);
+
+    if (angryValue >= sadValue && angryValue >= happyValue && angryValue >= calmValue && angryValue >= excitedValue) {
+        window.location.href = 'angry_food.html';
+    } else if (sadValue >= angryValue && sadValue >= happyValue && sadValue >= calmValue && sadValue >= excitedValue) {
+        window.location.href = 'sad_food.html';
+    } else if (happyValue >= angryValue && happyValue >= sadValue && happyValue >= calmValue && happyValue >= excitedValue) {
+        window.location.href = 'happy_food.html';
+    } else if (calmValue >= angryValue && calmValue >= sadValue && calmValue >= happyValue && calmValue >= excitedValue) {
+        window.location.href = 'calm_food.html';
+    } else if (excitedValue >= angryValue && excitedValue >= sadValue && excitedValue >= happyValue && excitedValue >= calmValue) {
+        window.location.href = 'excited_food.html';
+    }
+}
+    </script>
+</body>
+</html>

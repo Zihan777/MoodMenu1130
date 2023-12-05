@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sad</title>
+    <link rel="stylesheet" href="p2.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .main-image {
+            width: 101%; 
+            z-index: 1;
+        }
+
+        .floating-image {
+            position: absolute;
+            width: 25%; 
+            z-index: 1;
+            bottom: 25%; 
+            left: 48%;
+            transform: translateX(-50%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="back-button">
+        <a href="page3.html" class="button">Back</a> 
+    </div>
+
+    <div class="header-buttons">
+        <a href="index.html" class="button">Home</a>
+        <a href="about.html" class="button">About</a> 
+    </div>
+
+    <img src="happyfood.png" alt="happy" class="main-image">
+    <a href="hfinfo.html">
+        <img src="hf.png" alt="Learn More" class="floating-image">
+    </a>
+</body>
+</html>

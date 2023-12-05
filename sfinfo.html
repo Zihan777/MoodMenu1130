@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sad</title>
+    <link rel="stylesheet" href="p2.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="back-button">
+        <a href="sad_food.html" class="button">Back</a> 
+    </div>
+
+    <div class="header-buttons">
+        <a href="index.html" class="button">Home</a>
+        <a href="about.html" class="button">About</a> 
+    </div>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .food-image {
+            margin-top: 50px; 
+            width: 300px;
+            height: 300px;
+            border-radius: 50%; 
+            background-image: url('sf.png'); 
+            background-size: Cover; 
+            background-position: center; 
+        }
+        .nav-buttons {
+            margin-top: 30px;
+        }
+        .nav-buttons button {
+            padding: 15px 30px; 
+            margin: 15px; 
+            border: none;
+            border-radius: 25px; 
+            background-color: #e0e0e0;
+            cursor: pointer;
+            font-size: 1.5em; 
+        }
+        .content-area {
+            margin-top: 20px;
+            width: 80%;
+            background-color: #e0e0e0;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+    </div>
+    
+    <div class="food-image"></div>
+    <div class="food-name"> Power Bowl</div> 
+    <div class="nav-buttons">
+        <button onclick="showContent('why')">Why</button>
+        <button onclick="showContent('where')">Where</button>
+        <button onclick="showContent('what')">What</button>
+    </div>
+    <div class="fixed-bottom-button">
+        <a href="end.html" class="button">OK</a>
+    </div>
+<div class="content-area" id="content">
+    <div id="why-content" class="info">
+        <ul>
+            <li>Nutritional Balance: The combination of fibers, proteins, and healthy fats contributes to overall physical and emotional balance, essential during times of sadness.</li>
+            <li>Soothing Flavors: The unique blend of harissa and yogurt harissa sauce can provide a comforting and warm sensation, which may help alleviate feelings of sadness.</li>
+            <li>Antioxidants and Vitamins: Ingredients like roasted sweet potatoes and broccoli are high in antioxidants and vitamins, which can improve mood and enhance the body's resilience against stress.</li>
+        </ul>
+    </div>
+    
+    <div id="where-content" class="info" style="display: none;">Piada Italian Street Food<li>3600 Forbes Ave, Pittsburgh, PA 15213</li></div>
+    <div id="what-content" class="info" style="display: none;">Harissa grain blend, hummus, roasted sweet potatoes, sweet corn & tomato, roasted broccoli, cucumber salad, pickled red onions, yogurt harissa.</div>
+</div>
+
+<script>
+    function showContent(contentId) {
+        document.querySelectorAll('.info').forEach(function(div) {
+            div.style.display = 'none';
+        });
+
+        document.getElementById(contentId + '-content').style.display = 'block';
+    }
+    
+    document.getElementById('why-content').style.display = 'block';
+</script>
+
+</body>
+</html>
+

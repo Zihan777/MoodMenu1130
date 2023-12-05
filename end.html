@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sad</title>
+    <link rel="stylesheet" href="p2.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-buttons {
+            /* Your header button styles here */
+        }
+
+        /* Style for the end page */
+        .end-page {
+            background-image: url('end.png'); /* Replace 'end.png' with your image file */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 56.25vw; /* 16:9 aspect ratio (9/16 * 100) */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end; /* Place content at the bottom */
+            padding-bottom: 20px; /* Add some padding to separate content from the bottom */
+            position: relative; /* Position relative for absolute positioning of text and lines */
+        }
+
+        /* Style for the scrolling text container */
+        .scrolling-text-container {
+            position: absolute;
+            bottom: 10px; /* Adjust the distance from the bottom */
+            width: 100%;
+            white-space: nowrap; /* Prevent text from wrapping to the next line */
+            overflow: hidden; /* Hide the overflow of text */
+        }
+
+        /* Style for the scrolling text */
+        .scrolling-text {
+            font-size: 30px; /* Adjust font size as needed */
+            color: white; /* White text color */
+            padding: 10px 20px; /* Adjust padding as needed */
+            border-radius: 10px;
+            animation: scroll 10s linear infinite; /* Scroll animation */
+        }
+
+        /* Keyframes for scrolling animation */
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Buttons -->
+    <div class="header-buttons">
+        <a href="index.html" class="button">Home</a>
+        <button class="button">About</button>
+    </div>
+
+    <!-- End Page -->
+    <div class="end-page">
+        <div class="scrolling-text-container">
+            <div class="scrolling-text">
+                Hope this was helpful to you, and wish you a pleasant day! Remember to enjoy your meals and take good care of yourself.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
